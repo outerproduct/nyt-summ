@@ -4,7 +4,7 @@ Extraction and pre-processing of summarization datasets from the New York Times 
 
 This library was developed and tested under Python 3.4. Feel free to send me errors or pull requests for extending compatibility to earlier versions of Python.
 
-We depend on [NLTK](http://www.nltk.org/) for first-pass sentence splitting and [spaCy](https://spacy.io/) for part-of-speech tagging.
+We depend on [NLTK](http://www.nltk.org/) for first-pass sentence splitting and [spaCy](https://spacy.io/) for verb detection via part-of-speech tagging.
 ```
 $ pip3 install nltk
 $ pip3 install spacy
@@ -24,7 +24,7 @@ main.py --help
 
 ### Citation
 
-If you use this library in a research project, please cite:
+If you use this code in a research project, please cite:
 
 Junyi Jessy Li, Kapil Thadani and Amanda Stent. The Role of Discourse Units in Near-Extractive Summarization. In *Proceedings of the 17th Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL).* 2016.
 
@@ -36,3 +36,5 @@ Junyi Jessy Li, Kapil Thadani and Amanda Stent. The Role of Discourse Units in N
   year      = {2016},
 }
 ```
+
+Document IDs for the datasets used in this paper are available [here](http://www.cs.columbia.edu/~kapil/datasets/docids_nytsumm.tgz).
