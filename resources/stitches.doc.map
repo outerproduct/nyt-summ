@@ -1,0 +1,125 @@
+# Obviously bad split
+boycott	boy cott	2
+(''Voyage	( ''Voyage	1
+subject:	subject :	1
+off?	off ?	1
+Americans	Ameri cans	1
+largest	larg est	1
+because	be cause	1
+downloadable	download able	1
+negotiations	negotia tions	1
+financier	finan cier	1
+Under	Un der	1
+industry	in dustry	1
+Perhaps	Per haps	1
+defender.	de fender.	1
+AirCraft	Air Craft	1
+percent	per cent	1
+
+# If present in summ
+overall	over all	3
+overall.	over all.	1
+hairstyles	hair styles	1
+racecars	race cars	1
+adjust	ad just	1
+international	inter national	1
+Hussein	Hus sein	1
+
+# Bad split for abbreviations
+J.P.	J. P.	6
+J.D.	J. D.	5
+W.L.	W. L.	3
+O.J.	O. J.	2
+A.J.	A. J.	2
+J.J.	J. J.	2
+W.H.	W. H.	2
+F.L.	F. L.	1
+N.J.,	N. J.,	1
+M.C.	M. C.	1
+R.W.	R. W.	1
+H.C.	H. C.	1
+R.J.	R. J.	1
+J.A.	J. A.	1
+T.J.	T. J.	1
+A.G.	A. G.	1
+B.B.	B. B.	1
+J.C.	J. C.	1
+F.C.C.	F.C. C.	1
+E.E.	E. E.	1
+C.L.	C. L.	1
+A.S.	A. S.	1
+E.B.	E. B.	1
+I.M.	I. M.	1
+C.V.	C. V.	1
+
+# Bad split for periods
+announced.	announced .	1
+substance.	substance .	1
+Katrina.	Katrina .	1
+miles.	miles .	1
+www.starbucks-express.com,	www.starbucks-express .com,	1
+victory.	victory .	1
+revival.	revival .	1
+Vegas.	Vegas .	1
+space.	space .	1
+troops.	troops .	1
+gate.	gate .	1
+dull.	dull .	1
+company.	company .	1
+
+# Bad split for commas
+dynamic,	dynamic ,	1
+Americans,	Americans ,	1
+Kirk,	Kirk ,	1
+suffering,	suffering ,	1
+MORRELLS,	MORRELLS ,	1
+O.K.,	O.K. ,	1
+month,	month ,	1
+Prawda,	Prawda ,	1
+spring,	spring ,	1
+Díaz,	Díaz ,	1
+Bertelsmann,	Bertelsmann ,	1
+season,	season ,	1
+Trujillo,	Trujillo ,	1
+York,	York ,	1
+developer,	developer ,	1
+children,	children ,	1
+correctly,	correctly ,	1
+attacks,	attacks ,	1
+
+# # Bad split for hyphens -- handled in code
+# deal-maker	deal- maker	1
+# old-fashioned	old- fashioned	1
+# pass-catching	pass- catching	1
+# high-speed	high- speed	1
+# un-season.	un- season.	1
+# African-Americans.	African- Americans.	1
+# fastest-growing	fastest- growing	1
+# easy-money	easy- money	1
+# al-Sadr	al- Sadr	1
+# unheard-of	unheard- of	1
+# book-search	book- search	1
+# low-and	low- and	1
+# flat-panel	flat- panel	1
+# government-in-waiting	government-in- waiting	1
+# drug-and	drug- and	1
+# foreign-born	foreign- born	1
+# 25-year	25- year	1
+# sub-''Shrek''	sub- ''Shrek''	1
+# most-wanted	most- wanted	1
+# much-trumpeted	much- trumpeted	1
+# tenant-versus-rabbi	tenant-versus- rabbi	1
+# fuel-economy	fuel- economy	1
+# babes-and-hunks	babes-and- hunks	1
+
+# Bad split for apostrophes
+Jr.'s	Jr. 's	1
+Germany's	Germany 's	1
+world's	world 's	1
+
+# Bad split for slashes
+Times/CBS	Times/ CBS	2
+TBWA/Chiat/Day	TBWA/ Chiat/Day	1
+staffing/national	staffing/ national	1
+art/As	art/ As	1
+Byrd/The	Byrd/ The	1

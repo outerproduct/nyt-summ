@@ -1,0 +1,91 @@
+# # Alignment errors
+# crackdown	crack down	3
+# beat	be at	2
+# atop	a top	1
+# database	data base	1
+# takeover	take over	1
+# shutdown	shut down	1
+# comeback	come back	1
+# shutout	shut out	1
+# barbershop	barber shop	1
+# buyout	buy out	1
+# upon	up on	1
+# area	are a	1
+# across	a cross	1
+# Iraqis	Iraq is	1
+# online	on line	1
+# mea	me a	1
+# about	a bout	1
+# soon	so on	1
+# turnout.	turn out.	1
+# been	be en	1
+# mayor	may or	1
+# everything	every thing	1
+
+# # All but one alignment errors
+# into	in to	11
+can tune into	can tune in to	1
+# along	a long	6
+along-running	a long-running	1
+# cleanup	clean up	3
+to cleanup the	to clean up the	1
+# maybe	may be	3
+maybe overlooking	may be overlooking	1
+# onstage	on stage	1
+back onstage lobbing	back on stage lobbing	1
+
+# # All but two alignment errors
+# away	a way	4
+find away	find a way	1
+as away	as a way	1
+# anew	a new	3
+anew report	a new report	1
+anew pool	a new pool	1
+
+# # All but three alignment errors
+# onto	on to	7
+hang onto Chuck	hang on to Chuck	1
+hold onto Kurt	hold on to Kurt	1
+held onto all	held on to all	1
+
+# Only if present in doc
+Website	Web site	1
+townhouse	town house	1
+anymore	any more	1
+lifespan	life span	1
+heatstroke	heat stroke	1
+setup	set up	1
+oilfield	oil field	1
+USAir	US Air	1
+afar	a far	1
+turnover	turn over	1
+anytime	any time	1
+bloodbath	blood bath	1
+backyard.	back yard.	1
+sparkplug	spark plug	1
+cellphones	cell phones	1
+farmland	farm land	1
+packrats.	pack rats.	1
+healthcare	health care	1
+insight.	in sight.	1
+storyline	story line	1
+
+# Merges
+audi- ence	audience	1
+con- sidered	considered	1
+spring- ish	springish	1
+
+# Fractions
+121/2	12 1/2	2
+171/2	17 1/2	1
+131/2	13 1/2	1
+81/2	8 1/2	1
+61/2	6 1/2	1
+23/4,	2 3/4,	1
+91/2	9 1/2	1
+31/2	3 1/2	1
+21/2	2 1/2	1
+261/2	26 1/2	1
+71/2	7 1/2	1
+1321/2	132 1/2	1
+61/2-11/2	6 1/2-1 1/2	1
