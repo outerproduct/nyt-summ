@@ -1,4 +1,4 @@
-Extraction and pre-processing of article-summary pairs from the New York Times Annotated Corpus ([LDC2008T19](https://catalog.ldc.upenn.edu/LDC2008T19)).
+Extraction and pre-processing of summarization datasets from the New York Times Annotated Corpus ([LDC2008T19](https://catalog.ldc.upenn.edu/LDC2008T19)).
 
 ### Installation
 
