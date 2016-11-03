@@ -108,7 +108,7 @@ class NYTDoc:
         """Return whether this article has an accompanying summary of the
         given type ('abstract', 'lead' or 'online_lead')
         """
-        return summary_type == '*' or summary_type in self.summaries
+        return summary_type is None or summary_type in self.summaries
 
     def has_descriptors(self, labels, types=('online_general',)):
         """Return whether this article has a descriptor of the given type.

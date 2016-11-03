@@ -71,16 +71,17 @@ class NYTCorpus:
         return idf_table
 
     def filter_docs(self, path, summary_type=None, descriptors=None,
+                    descriptor_types=('online_general',),
                     exclude=False, **kwargs):
         """Yield filtered stories from the loaded corpus or drawn from disk.
         """
         doc_source = self.get_all_docs(path, **kwargs) \
-            if path is not None else self.docs
+            if path is not None else self.docs.values()
 
         for doc in doc_source:
             has_summary = summary_type is None or doc.has_summary(summary_type)
             has_descriptors = descriptors is None or doc.has_descriptors(
-                descriptors)
+                descriptors, types=descriptor_types)
             has_both = has_summary and has_descriptors
 
             # When exclude is True, only the documents that don't match the

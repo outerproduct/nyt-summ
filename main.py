@@ -23,8 +23,13 @@ def add_args(parser):
                         help='type of NYT summary to consider',
                         default='online_lead')
     parser.add_argument('--descriptors', action='store', nargs='+',
-                        help='topic of docs to extract',
+                        help='topics of docs to extract',
                         default=None)
+    parser.add_argument('--descriptor_types', action='store', nargs='+',
+                        choices=('indexing', 'online', 'online_general',
+                                 'taxonomic', 'type'),
+                        help='topic categories considered for --descriptors',
+                        default=('online_general',))
     parser.add_argument('--exclude', action='store_true',
                         help='drop docs with --descriptors')
 
@@ -82,6 +87,7 @@ if __name__ == '__main__':
                            shelf_path=args.shelf_path,
                            summary_type=args.summary_type,
                            descriptors=args.descriptors,
+                           descriptor_types=args.descriptor_types,
                            exclude=args.exclude)
 
     # Filter documents from the corpus by their summaries
