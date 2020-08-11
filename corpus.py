@@ -245,8 +245,8 @@ class NYTCorpus:
         print("\n")
 
     @staticmethod
-    def get_filename(summary_type=None, descriptors=None, exclude=False,
-                     suffix=''):
+    def get_filename(exclude=False, summary_type=None, descriptors=None,
+                     descriptor_types=('online_general',), suffix=''):
         """Generate a consistent filename for shelf/index/idf files
         generated from this document collection.
         """
@@ -254,8 +254,11 @@ class NYTCorpus:
                         '.X' if exclude else '',
                         ('.' + summary_type)
                         if summary_type is not None else '',
-                        ('.' + '+'.join(descriptor.replace(' ', '_')
-                                        for descriptor in descriptors))
+                        ('.' + '+'.join(type[type.rfind('_')+1:][:3]
+                                        for type in sorted(descriptor_types)) +
+                         ':' + '+'.join((descriptor[descriptor.rfind('/')+1:]
+                                         .replace(' ', '_'))
+                                        for descriptor in sorted(descriptors)))
                         if descriptors is not None else '',
                         suffix))
 
