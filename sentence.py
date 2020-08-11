@@ -4,16 +4,21 @@
 from lexical.tokenizer import tokenize
 from lexical.untokenizer import untokenize
 import re
-from spacy.en import English
+import spacy
 from utils.timer import Timer
 
 
-# Stateful init for spaCy API
-def load_spacy(parser=False):
-    with Timer() as t:
-        t.status("Loading spaCy{0}".format(" for parsing" if parser else ""))
-        return English(parser=parser, entity=False)
-spacy = load_spacy(parser=False)
+# Initialize spaCy with the largest available model
+models = ['en_core_web_lg', 'en_core_web_md', 'en_core_web_sm']
+with Timer() as t:
+    for model in models:
+        t.status("Loading spaCy {0}".format(model))
+        try:
+            nlp = spacy.load(model)
+            break
+        except OSError:
+            if model == models[-1]:
+                raise
 
 
 # A regexp to strip non-alphanumeric characters from a Unicode string
@@ -92,18 +97,23 @@ class Sentence:
         else:
             print(self.raw)
 
-    def get_parsed_tokens(self):
-        """Parse the sentence and return spaCy token objects.
+    def get_parsed(self):
+        """Parse the sentence and return a spaCy Doc object.
         """
-        global spacy
-        if not spacy.parser:
-            # Reload spaCy with data for parsing
-            spacy = load_spacy(parser=True)
+        if 'parsed' not in self.annotations:
+            self.annotations['parsed'] = nlp(self.raw)
+        return self.annotations['parsed']
 
-        if 'parsed_tokens' not in self.annotations:
-            self.annotations['parsed_tokens'] = spacy(self.raw,
-                                                      parse=True)
-        return self.annotations['parsed_tokens']
+    def get_noun_phrases(self):
+        """Return noun phrase chunks in the sentence.
+        """
+        # TODO: adverbs may need to be dropped
+        return list(self.get_parsed().noun_chunks)
+
+    def get_entities(self):
+        """Return named entities.
+        """
+        return list(self.get_parsed().ents)
 
     def get_stripped(self):
         """Return a version of the sentence without non-alphanumeric
@@ -161,6 +171,5 @@ class Sentence:
         """Derive a POS tag sequence for the given sentence. This may not
         synchronize with tokens so we also return spaCy's tokenization.
         """
-        return [(token.orth_, token.tag_) for token in spacy(text,
-                                                             tag=True,
-                                                             parse=False)]
+        return [(token.orth_, token.tag_) for token in nlp(text,
+                                                           disable=['parser'])]

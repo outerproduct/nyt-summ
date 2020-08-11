@@ -6,8 +6,9 @@ This library was developed and tested under Python 3.4. Feel free to send me err
 
 We depend on [NLTK](http://www.nltk.org/) for first-pass sentence splitting and [spaCy](https://spacy.io/) for verb detection via part-of-speech tagging.
 ```
-$ pip3 install nltk
-$ pip3 install spacy
+$ pip install nltk
+$ pip install spacy
+$ python -m spacy download en_core_web_sm
 ```
 
 ### Usage
