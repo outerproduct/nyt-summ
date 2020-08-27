@@ -25,7 +25,7 @@ class NYTCorpus:
                                        self.get_filename(suffix='.shelf',
                                                          **self.filters))
 
-        if os.path.exists(self.shelf_path):
+        if len(glob.glob(self.shelf_path + '*')) > 0:
             # Load the documents via the shelf. Since we're not using
             # writeback, modifying a doc will not result in a commit
             # but assigning it to self.docs will.
